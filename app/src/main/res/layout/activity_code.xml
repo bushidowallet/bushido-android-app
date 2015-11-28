@@ -1,0 +1,42 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="75dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+    <EditText android:text=""
+        android:inputType="number"
+        android:id="@+id/authcode"
+        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:hint="@string/input_authcode"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:text="@string/button_deliver_token"
+        android:onClick="deliverToken"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:text="@string/button_proceed"
+        android:onClick="login"/>
+
+    </LinearLayout>
+
+</FrameLayout>

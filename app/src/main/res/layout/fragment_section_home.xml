@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView android:text="@string/live_balance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0.0000 BTC / (0.0000 BTC)"
+            android:id="@+id/balance"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView android:textColor="#FFFFFF"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00 PLN"
+            android:id="@+id/plnBalance"/>
+
+    </LinearLayout>
+
+</FrameLayout>

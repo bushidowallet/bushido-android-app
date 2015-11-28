@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <com.bitcoin.blockchain.api.android.app.controls.EditTextWithLabel android:visibility="gone"
+            android:textColor="#FFFFFF"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/amount"/>
+
+        <com.bitcoin.blockchain.api.android.app.controls.EditTextWithLabel
+            android:textColor="#FFFFFF"
+            android:inputType="textNoSuggestions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recipientAddress"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan QR Code"
+                android:id="@+id/scan_code"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spend All"
+                android:id="@+id/spend_all"
+                android:layout_gravity="center"/>
+
+            <Button android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spend"
+                android:id="@+id/spend"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

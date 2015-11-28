@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorAccent">#ffffffff</item>
+        <item name="android:colorPrimary">#1574A8</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+    </style>
+    <style name="ButtonStyle" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_default_material</item>
+        <item name="android:textColor">#1574A8</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+</resources>

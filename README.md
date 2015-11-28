@@ -1,2 +1,2 @@
 # bushido-android-app
-Code repository for Bushido application for Android devices
+Bushido Android Wallet Application

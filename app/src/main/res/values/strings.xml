@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="PRESSED_STATE_COLOR">#FEFEFE</color>
+    <color name="FOCUSED_STATE_COLOR">#CECECE</color>
+    <color name="NORMAL_STATE_COLOR">#FFFFFF</color>
+    <color name="grey">#DEDEDE</color>
+
+    <string name="app_name">Bushido</string>
+    <string name="input_server_address">Server Address</string>
+    <string name="port">Port</string>
+    <string name="input_wallet">Wallet Id</string>
+    <string name="input_user">Username or Email</string>
+    <string name="input_password">Password</string>
+    <string name="input_authcode">Authentication Code</string>
+    <string name="button_login">Login</string>
+    <string name="button_proceed">Proceed</string>
+    <string name="button_deliver_token">Request Token</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="title_activity_main_screen">Bushido Wallet : Main</string>
+    <string name="live_balance">live balance</string>
+    <string name="your_wallets">your wallets</string>
+    <string name="spend">Spend</string>
+    <string name="receive">Receive</string>
+    <string name="history">History</string>
+    <string name="choose_wallet">Choose your wallet</string>
+    <string name="home">Home</string>
+    <string name="pay">Pay</string>
+    <string name="send">Send</string>
+    <string name="amount_of">amount of</string>
+
+    <string-array name="envs">
+        <item>Prod</item>
+        <item>Dev</item>
+    </string-array>
+
+    <!-- zxing -->
+    <string name="contents_text">Plain text</string>
+    <string name="contents_email">Email address</string>
+    <string name="contents_phone">Phone number</string>
+    <string name="contents_sms">SMS address</string>
+    <string name="contents_contact">Contact info</string>
+    <string name="contents_location">Geographic coordinates</string>
+
+    <!-- configs -->
+    <string name="rest_host_prod">bushidowallet.com</string>
+    <string name="rest_host_dev">192.168.1.104</string>
+    <string name="rest_port_prod">80</string>
+    <string name="rest_port_dev">8080</string>
+    <string name="socket_host_prod">146.148.25.159</string>
+    <string name="socket_host_dev">192.168.1.104</string>
+    <string name="socket_port_prod">5672</string>
+    <string name="socket_port_dev">5672</string>
+
+</resources>
