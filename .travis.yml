@@ -4,3 +4,5 @@ android:
   components:
     - build-tools-21.1.2
     - android-21
+before_install:
+    - chmod +x gradlew
