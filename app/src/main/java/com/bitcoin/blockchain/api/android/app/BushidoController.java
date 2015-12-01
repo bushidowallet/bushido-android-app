@@ -33,6 +33,9 @@ public class BushidoController extends Application {
     public List<V2WalletDescriptor> wallets;
     public V2WalletDescriptor wallet;
 
+    /**
+     * Constructor
+     */
     public BushidoController() {
 
     }
