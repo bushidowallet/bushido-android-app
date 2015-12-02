@@ -45,7 +45,7 @@ before_script:
     - adb shell input keyevent 82 &
 
 script:
-  - ./gradlew connectedCheck
+  - ./gradlew test
 
 after_script:
   - cat ${TRAVIS_BUILD_DIR}/espresso/*/app/build/outputs/androidTest-results/connected/* # show logs
