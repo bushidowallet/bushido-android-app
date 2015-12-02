@@ -42,5 +42,5 @@ dependencies {
     compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
     compile 'com.rabbitmq:amqp-client:3.4.4'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.4.+'
-    compile 'com.bushidowallet:bushido-model-lib:1.0.1-SNAPSHOT'
+    compile 'com.bushidowallet:bushido-model-lib:1.0.1'
 }
