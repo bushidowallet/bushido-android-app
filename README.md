@@ -1,2 +1,2 @@
 # bushido-android-app
-Bushido Android Wallet Application
+Bushido Android Wallet Application [![Build Status](https://travis-ci.org/bushidowallet/bushido-android-app.svg?branch=master)](https://travis-ci.org/bushidowallet/bushido-android-app)
