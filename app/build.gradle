@@ -29,9 +29,6 @@ android {
         abortOnError false
         ignoreWarnings true
     }
-    adbOptions {
-        timeOutInMs 60000 // set timeout to 1 minute in order to fix the CI build error
-    }
 }
 
 repositories {
