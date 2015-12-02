@@ -1,8 +1,14 @@
 language: android
 jdk: oraclejdk7
+# Turn off caching to avoid any caching problems
+cache: false
+# Use the Travis Container-Based Infrastructure
+sudo: false
 env:
   matrix:
     - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
+  global:
+    - ADB_INSTALL_TIMEOUT=8 # minutes (2 minutes by default)
 
 android:
   components:
