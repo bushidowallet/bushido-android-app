@@ -1,5 +1,5 @@
 language: android
-jdk: oraclejdk7
+
 sudo: false
 
 cache:
@@ -11,8 +11,6 @@ notifications:
   email: false
 
 env:
-  matrix:
-    - ANDROID_TARGET=android-21 ANDROID_ABI=armeabi-v7a
   global:
     - INSTALL_PKGS='build-tools-21.1.2'
     - UPDATE_PKGS='platform-tools,tools,extra-android-m2repository,extra-google-m2repository'
@@ -24,13 +22,23 @@ env:
     - ANDROID_HOME='/usr/local/android-sdk'
     - PATH="${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}"
 
-android:
-  components:
-    - build-tools-21.1.2
-    - android-21
+matrix:
+  include:
+    - env: AVD_TARGET=android-15
+    - env: AVD_TARGET=android-17
+    - env: AVD_TARGET=android-19
+    - env: AVD_TARGET=android-21
+    - env: AVD_TARGET='Google Inc.:Google APIs:21' AVD_TAG=google_apis
+           TARGET_PKGS=addon-google_apis-google-21,sys-img-armeabi-v7a-addon-google_apis-google-21
+  allow_failures:
+    - env: AVD_TARGET='Google Inc.:Google APIs:21' AVD_TAG=google_apis
+           TARGET_PKGS=addon-google_apis-google-21,sys-img-armeabi-v7a-addon-google_apis-google-21
+  fast_finish: true
 
 before_install:
-    - chmod +x gradlew
+  - chmod +x gradlew
+  - ./execute inexistent install-and-update-sdk
+  - ./execute create-and-start-device wait-for-device-online
 
 install:
   - ./gradlew --version # show version and download Gradle Wrapper when is not present in cache
@@ -38,14 +46,10 @@ install:
   - ./gradlew assemble
 
 before_script:
-    # Create and start emulator
-    - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
-    - emulator -avd test -no-skin -no-audio -no-window &
-    - adb wait-for-device
-    - adb shell input keyevent 82 &
+  - ./execute wait-for-device-ready inexistent
 
 script:
-  - ./gradlew test
+  - ./gradlew connectedCheck
 
 after_script:
   - cat ${TRAVIS_BUILD_DIR}/espresso/*/app/build/outputs/androidTest-results/connected/* # show logs
