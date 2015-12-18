@@ -13,6 +13,7 @@
     <string name="input_wallet">Wallet Id</string>
     <string name="input_user">Username or Email</string>
     <string name="input_password">Password</string>
+    <string name="input_pin">PIN</string>
     <string name="input_authcode">Authentication Code</string>
     <string name="button_login">Login</string>
     <string name="button_proceed">Proceed</string>
@@ -46,11 +47,11 @@
     <string name="contents_location">Geographic coordinates</string>
 
     <!-- configs -->
-    <string name="rest_host_prod">bushidowallet.com</string>
+    <string name="rest_host_prod">api.bushidowallet.com</string>
     <string name="rest_host_dev">192.168.1.104</string>
     <string name="rest_port_prod">80</string>
     <string name="rest_port_dev">8080</string>
-    <string name="socket_host_prod">146.148.25.159</string>
+    <string name="socket_host_prod">46.101.229.248</string>
     <string name="socket_host_dev">192.168.1.104</string>
     <string name="socket_port_prod">5672</string>
     <string name="socket_port_dev">5672</string>

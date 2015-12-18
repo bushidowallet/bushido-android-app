@@ -25,6 +25,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Jesion on 2015-07-06.
  */
@@ -86,7 +89,9 @@ public class CodeActivity extends Activity {
         protected UserLoginResponse doInBackground(String... params) {
             EditText authCodeCtrl = (EditText) findViewById(R.id.authcode);
             String authCode = authCodeCtrl.getText().toString();
-            UserLoginRequest request = new UserLoginRequest(controller.username, authCode);
+            List<String> cred = new ArrayList<String>();
+            cred.add(authCode);
+            UserLoginRequest request = new UserLoginRequest(controller.username, cred);
             HttpAuthentication authHeader = new HttpBasicAuthentication(controller.username, controller.password);
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setAuthorization(authHeader);

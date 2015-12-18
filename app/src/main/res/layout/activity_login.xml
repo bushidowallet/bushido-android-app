@@ -38,6 +38,14 @@
         android:layout_weight="1"
         android:hint="@string/input_password"/>
 
+    <EditText android:text=""
+        android:inputType="textPassword"
+        android:id="@+id/pin"
+        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:hint="@string/input_pin"/>
+
     <Button
         android:layout_width="fill_parent"
         android:layout_weight="1"

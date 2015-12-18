@@ -25,6 +25,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LoginActivity extends Activity implements AdapterView.OnItemSelectedListener {
 
     public final static String EXTRA_LOGIN_RESPONSE = "com.bitcoin.blockchain.api.android.LOGIN_RESPONSE";
@@ -108,9 +111,14 @@ public class LoginActivity extends Activity implements AdapterView.OnItemSelecte
         protected UserLoginResponse doInBackground(String... params) {
             EditText usernameCtrl = (EditText) findViewById(R.id.username);
             EditText passwordCtrl = (EditText) findViewById(R.id.password);
+            EditText pinCtrl = (EditText) findViewById(R.id.pin);
             String username = usernameCtrl.getText().toString();
             String password = passwordCtrl.getText().toString();
-            UserLoginRequest request = new UserLoginRequest(username, password);
+            String pin = pinCtrl.getText().toString();
+            List<String> cred = new ArrayList<String>();
+            cred.add(password);
+            cred.add(pin);
+            UserLoginRequest request = new UserLoginRequest(username, cred);
             HttpHeaders requestHeaders = new HttpHeaders();
             requestHeaders.setContentType(new MediaType("application", "json"));
             HttpEntity<Object> requestEntity = new HttpEntity<Object>(request, requestHeaders);

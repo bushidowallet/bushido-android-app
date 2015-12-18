@@ -8,8 +8,8 @@ android {
         applicationId "com.bitcoin.blockchain.api.android"
         minSdkVersion 21
         targetSdkVersion 21
-        versionCode 6
-        versionName "1.05"
+        versionCode 7
+        versionName "1.06"
     }
     buildTypes {
         release {
@@ -43,5 +43,5 @@ dependencies {
     compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
     compile 'com.rabbitmq:amqp-client:3.4.4'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.4.+'
-    compile 'com.bushidowallet:bushido-model-lib:1.0.1'
+    compile 'com.bushidowallet:bushido-model-lib:1.0.3'
 }
